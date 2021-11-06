@@ -1,0 +1,102 @@
+/*Define os estilos para cada tipo de coisa, por exemplo, o h1*/
+* {
+  /* *{} é o seletor universal, aplica a tudo*/
+
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%); /*--"variável" cria uma variável*/
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothig: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center; /*centraliza na tela*/
+}
+main {
+  background: url(images/background.svg);
+  width: 375px;
+  height: 812px;
+}
+.container {
+  /*para chamar uma classe, usa ".classe"*/
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem; /*rem é uma medida proporcional ao tamanho, em pixels, da fonte padrão da página. Nesse caso, a fonte tem 10px, então a imagem vai ter 160px.*/
+
+  margin: 11.5rem auto 0; /*top, right, bottom e left. Se forem só dois é top/bottom e right/left. Se forem 3 é top, right/left e bottom*/
+
+  position: relative; /*Transforma esse elemento na referência para o position*/
+}
+.avatar span {
+  /*acha a classe span dentro do .avatar*/
+
+  position: absolute; /*se não houver nenhum position relative, ele fica absoluto em relação à página toda*/
+  top: -15px;
+
+  z-index: 1; /*controla a pozição no eixo z. O que tá mais pra frente ou pra trás na tela*/
+}
+
+.avatar > img {
+  /*sinal de maior pega apenas a img do primeiro nível*/
+
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /*a imagem era quadrada, como eu pedi um retângulo, ela ficaria distorcida. COm o object-fit, ele "corta" a imagem, mas fica na proporção correta.*/
+
+  clip-path: polygon(
+    0 25%,
+    50% 0,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0 75%
+  ); /*consegue as proporções no https://bennettfeely.com/clippy/*/
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+h1 {
+  font-size: 2.5rem; /*O elemento que entra por último na cascata é o que tem mais força*/
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+  list-style: none; /*retira as bolinhas da lista*/
+  padding: 0;
+
+  display: flex; /*coloca uma caixa ao lado da outra*/
+
+  flex-direction: row;
+
+  gap: 0.5rem; /*espaçamento entre eles*/
+
+  justify-content: center; /* justifica as caixinhas ao longo da linha*/
+}

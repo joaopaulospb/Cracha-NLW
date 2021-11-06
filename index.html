@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--Define que estou usando HTML5-->
+
+<html>
+  <!--Tag raíz (pai, nó)-->
+
+  <head>
+    <!--Tags filhas-->
+
+    <title>JP - NLW Heat</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <!--Tags que não levam conteúdo, se fecham nelas mesmas, não precisam do </link>-->
+
+    <!--Fontes Roboto 400 e Roboto 700 bold-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!--para criar uma classe, utiliza ".nome"-->
+        <div class="avatar">
+          <span>
+            <img src="images/build.svg" alt="Selo" />
+            <!--alt é o retorno caso ele não ache a imagem na src. Além disso, ele é o que o leito fala para os cegos e tbm a referência na pesquisa do google-->
+          </span>
+          <img
+            id="userPhoto"
+            src="https://lorempixel.com/185/185/people/"
+            alt="Foto pessoal"
+          />
+        </div>
+
+        <h1 id="userName">Joao Paulo</h1>
+        <!--h1 deixa texto grande e grosso, o id identifica esse campo para ser referenciado depois-->
+
+        <a id="userProfile" href="http://github.com" target="_blank"
+          ><img src="images/github.svg" alt="Ícone Github" />
+          <span id="userLogin"></span
+        ></a>
+        <!--Hyperlink p/ instagram-->
+
+        <p id="userBio">
+          An instructor focused on helping pople start programming for web
+        </p>
+        <!-- <p> é parágrafo (caixa de texto)-->
+
+        <ul id="socialLinks">
+          <!--<ul> lista não ordenada-->
+
+          <li class="youtube">
+            <a href="https://www.youtube.com/" target="_blank"
+              ><img src="images/YouTube.svg" alt="Ícone Youtube"
+            /></a>
+          </li>
+          <li class="facebook">
+            <a href="https://www.facebook.com/" target="_blank"
+              ><img src="images/Facebook.svg" alt="Ícone Facebook" />
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="https://www.instagram.com/" target="_blank"
+              ><img src="images/Instagram.svg" alt="Ícone Instagram"
+            /></a>
+          </li>
+          <li class="twitter">
+            <a href="https://www.twitter.com/" target="_blank"
+              ><img src="images/Twitter.svg" alt="Ícone Twitter"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
